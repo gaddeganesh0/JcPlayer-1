@@ -69,7 +69,7 @@ class JcNotificationPlayer private constructor(private val context: Context) :
         this.title = title
         this.iconResource = iconResourceResource
         val openUi = Intent(context, context.javaClass)
-        openUi.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+        openUi.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
 
         notification = NotificationCompat.Builder(context, NOTIFICATION_CHANNEL)
             .setSmallIcon(iconResourceResource)
